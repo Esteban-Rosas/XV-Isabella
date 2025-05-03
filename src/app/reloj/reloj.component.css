@@ -1,0 +1,69 @@
+.reloj-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: rgba(254, 240, 245, 1); /* Fondo semi-transparente */
+    color: black;
+    font-family: 'Great Vibes', cursive;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease; /* Transición suave */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    width: 100%;
+    position: relative; /* Posición inicial */
+  }
+  
+  .contador {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+  }
+  
+  .tiempo {
+    text-align: center;
+  }
+  
+  .tiempo span:first-child {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .tiempo span:last-child {
+    font-size: 1em;
+    color: rgba(199, 21, 133, 0.8); /* Color rosado oscuro semi-transparente */
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 768px) {
+    .tiempo span:first-child {
+      font-size: 1.5em; /* Tamaño más pequeño para tablets */
+    }
+  
+    .tiempo span:last-child {
+      font-size: 0.8em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tiempo span:first-child {
+      font-size: 1.2em; /* Tamaño más pequeño para móviles */
+    }
+  
+    .tiempo span:last-child {
+      font-size: 0.7em;
+    }
+  }
+  
+  .reloj-container.fixed {
+    position: fixed; /* Fija el reloj en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: rgba(255, 240, 245, 0.9); /* Fondo semi-transparente */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }

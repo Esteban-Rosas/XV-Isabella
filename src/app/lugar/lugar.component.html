@@ -1,0 +1,30 @@
+<div class="lugar-container">
+  <!-- Información de ubicación principal -->
+  <div class="info-destacada">
+    <h2>Ubicaciones</h2>
+    <div class="info-card">
+      <h3>Salón El Mirador</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Cra 10 #20-30, Pasto</p>
+      <p class="horario"><i class="fas fa-clock"></i> 7:00 PM</p>
+    </div>
+  </div>
+
+  <!-- Línea de tiempo simplificada -->
+  <div class="timeline">
+    <h2>Itinerario del Día</h2>
+    <div class="timeline-line">
+      <div class="timeline-progress"></div>
+    </div>
+    
+    <div class="timeline-items">
+      <div class="timeline-item" *ngFor="let evento of eventos">
+        <div class="timeline-icon">{{evento.emoji}}</div>
+        <div class="timeline-content">
+          <h3>{{evento.hora}}</h3>
+          <p>{{evento.actividad}}</p>
+          <p class="lugar-timeline">{{evento.lugar}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

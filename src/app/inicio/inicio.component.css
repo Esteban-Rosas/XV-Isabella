@@ -1,0 +1,88 @@
+/* Estilos generales */
+.inicio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-image: url('fondo.png'); /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  padding: 20px; /* Espaciado para dispositivos pequeños */
+}
+
+.contenido {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%; /* Limita el ancho en dispositivos pequeños */
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.desliza {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.desliza span {
+  display: block;
+  cursor: pointer;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em; /* Tamaño más pequeño para tablets */
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em; /* Tamaño más pequeño para móviles */
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .contador {
+    gap: 10px; /* Menor espacio entre los elementos */
+  }
+
+  .tiempo span:first-child {
+    font-size: 1.2em;
+  }
+
+  .tiempo span:last-child {
+    font-size: 0.7em;
+  }
+}

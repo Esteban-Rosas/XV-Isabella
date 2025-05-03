@@ -1,0 +1,31 @@
+/* Estilos generales */
+.mensaje-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #f9f9f9; /* Fondo claro */
+    color: #333; /* Color del texto */
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    padding: 20px; /* Espaciado para dispositivos pequeños */
+  }
+  
+  .contenido p {
+    font-size: 2em;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 768px) {
+    .contenido p {
+      font-size: 1.5em; /* Tamaño más pequeño para tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contenido p {
+      font-size: 1.2em; /* Tamaño más pequeño para móviles */
+    }
+  }
