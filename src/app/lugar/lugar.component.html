@@ -1,30 +1,31 @@
+<app-confirmar-asistencia></app-confirmar-asistencia>
 <div class="lugar-container">
-  <!-- Información de ubicación principal -->
-  <div class="info-destacada">
-    <h2>Ubicaciones</h2>
-    <div class="info-card">
-      <h3>Salón El Mirador</h3>
-      <p><i class="fas fa-map-marker-alt"></i> Cra 10 #20-30, Pasto</p>
-      <p class="horario"><i class="fas fa-clock"></i> 7:00 PM</p>
-    </div>
-  </div>
-
-  <!-- Línea de tiempo simplificada -->
-  <div class="timeline">
-    <h2>Itinerario del Día</h2>
-    <div class="timeline-line">
-      <div class="timeline-progress"></div>
-    </div>
-    
-    <div class="timeline-items">
-      <div class="timeline-item" *ngFor="let evento of eventos">
-        <div class="timeline-icon">{{evento.emoji}}</div>
-        <div class="timeline-content">
-          <h3>{{evento.hora}}</h3>
-          <p>{{evento.actividad}}</p>
-          <p class="lugar-timeline">{{evento.lugar}}</p>
-        </div>
+  <h1>Celebración</h1>
+  
+  <div class="tarjeta-lugar">
+    <div class="detalles-evento">
+      <p>La fiesta será el día <strong>Sábado 24 de Mayo</strong>.</p>
+      <p>Los espero a las <strong>7:00 P.M</strong> en:</p>
+      
+      <div class="nombre-salon">
+        <i class="fas fa-crown"></i>
+        <h2>Salón de Eventos y Restaurante EL MIRADOR</h2>
       </div>
+      
+      <div class="direccion">
+        <i class="fas fa-location-dot"></i>
+        <p>Corregimiento de Cabrera</p>
+      </div>
+    </div>
+
+    <div class="botones-accion">
+      <button class="boton-mapa" (click)="abrirMapa()">
+        <i class="fas fa-map-location-dot"></i> VER MAPA
+      </button>
+      
+      <button class="boton-confirmar" (click)="abrirModalConfirmacion()" aria-label="Confirmar asistencia">
+        <i class="fas fa-envelope" aria-hidden="true"></i> CONFIRMAR ASISTENCIA
+      </button>
     </div>
   </div>
 </div>

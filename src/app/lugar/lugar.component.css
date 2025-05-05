@@ -1,96 +1,169 @@
-/* Estilos generales */
+/* Contenedor principal */
 .lugar-container {
-  background: #fff9fa;
-  padding: 40px 20px;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Tarjeta de información */
-.info-destacada {
   text-align: center;
-  margin-bottom: 50px;
+  padding: 2rem;
+  font-family: 'Great Vibes', cursive;
+    padding: 20px;
 }
 
-.info-card {
-  background: white;
+/* Tarjeta del lugar */
+.tarjeta-lugar {
+  background-color: #fff9f0;
   border-radius: 12px;
-  padding: 25px;
+  padding: 2rem;
   max-width: 500px;
   margin: 0 auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.info-card h3 {
-  color: #c71585;
-  margin-top: 0;
+.detalles-evento {
+  margin-bottom: 1.5rem;
+  color: #5a3d2b;
+  line-height: 1.6;
 }
 
-.horario {
-  color: #666;
-  margin-top: 10px;
-}
-
-/* Línea de tiempo (conserva tus estilos) */
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  top: 50px;
-  bottom: 0;
-  width: 3px;
-  background: #f0d6e0;
-  transform: translateX(-50%);
-}
-
-.timeline-progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: #c71585;
-  transition: height 0.4s ease-out;
-}
-
-.timeline-item {
+.nombre-salon {
   display: flex;
-  margin-bottom: 40px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 1.5rem 0;
 }
 
-.timeline-item.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.timeline-icon {
-  /* Tus estilos existentes */
-}
-
-.timeline-content {
-  /* Tus estilos existentes */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .timeline-line {
-    left: 30px;
-  }
-  
-  .timeline-item {
-    margin-left: 60px;
-  }
-}
-
-/* Iconos */
-.fas {
-  margin-right: 8px;
+.nombre-salon h2 {
   color: #c71585;
+  /* Rosa para coincidir con el botón */
+  margin: 0;
+}
+
+.direccion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+/* Iconos (FontAwesome) */
+.fa-crown,
+.fa-location-dot {
+  color: #d4af37;
+  /* Dorado para iconos */
+}
+
+.boton-mapa {
+  /* Estilos base (manteniendo tu gradiente rosa) */
+  background: linear-gradient(135deg, #c71585 0%, #e91e63 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.1em;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 20px rgba(199, 21, 133, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Great Vibes', cursive;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Efecto hover con brillo y movimiento */
+.boton-mapa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(199, 21, 133, 0.4);
+  background: linear-gradient(135deg, #e91e63 0%, #c71585 100%);
+}
+
+/* Efecto de "pulsación" al hacer clic */
+.boton-mapa:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Animación de onda al hacer clic */
+.boton-mapa::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  z-index: -1;
+}
+
+.boton-mapa:focus:not(:active)::after {
+  animation: onda 0.6s ease-out;
+}
+
+@keyframes onda {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+/* Animación de latido (pulse) constante */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.boton-mapa {
+  animation: pulse 2.5s infinite;
+  background: linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%);
+}
+
+/* Icono con movimiento sutil */
+.boton-mapa i {
+  transition: transform 0.3s ease;
+}
+
+.boton-mapa:hover i {
+  transform: rotate(10deg) scale(1.2);
+}
+.botones-accion {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.boton-mapa {
+  /* Mantén tus estilos actuales */
+  background: linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%);
+}
+
+.boton-confirmar {
+  background: linear-gradient(135deg, #c71585 0%, #e91e63 100%);
+    /* Copia el resto de estilos de boton-mapa y ajusta colores */
+}
+
+/* Asegúrate que los botones sean flexibles en móviles */
+@media (max-width: 600px) {
+  .botones-accion {
+    flex-direction: column;
+  }
 }

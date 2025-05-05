@@ -1,0 +1,45 @@
+<div class="modal" *ngIf="mostrarModal">
+    <div class="modal-contenido">
+      <span class="cerrar" (click)="cerrarModal()">&times;</span>
+      <h1>Confirmar Asistencia</h1>
+      <p class="mensaje">Confirmar antes del <strong>18 de marzo</strong></p>
+  
+      <form [formGroup]="formularioAsistencia" (ngSubmit)="enviarConfirmacion()" class="formulario">
+        <div class="campo">
+          <label for="nombre">Nombre completo:</label>
+          <input 
+            type="text" 
+            id="nombre" 
+            formControlName="nombre"
+            placeholder="Ingresa tu nombre"
+            [class.error]="formularioAsistencia.get('nombre')?.invalid && formularioAsistencia.get('nombre')?.touched"
+          >
+          <div *ngIf="formularioAsistencia.get('nombre')?.invalid && formularioAsistencia.get('nombre')?.touched" class="error-message">
+            El nombre es obligatorio.
+          </div>
+        </div>
+  
+        <div class="campo">
+          <label for="invitados">Número de invitados:</label>
+          <input 
+            type="number" 
+            id="invitados" 
+            formControlName="invitados"
+            min="1"
+            [class.error]="formularioAsistencia.get('invitados')?.invalid && formularioAsistencia.get('invitados')?.touched"
+          >
+          <div *ngIf="formularioAsistencia.get('invitados')?.invalid && formularioAsistencia.get('invitados')?.touched" class="error-message">
+            Debe ser al menos 1 invitado.
+          </div>
+        </div>
+  
+        <button 
+          type="submit" 
+          class="boton-enviar" 
+          [disabled]="formularioAsistencia.invalid"
+        >
+          CONFIRMAR
+        </button>
+      </form>
+    </div>
+  </div>
