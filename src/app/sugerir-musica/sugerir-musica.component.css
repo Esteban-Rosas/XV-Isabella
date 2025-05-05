@@ -1,0 +1,66 @@
+.musica-container {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff6f7;
+    border-radius: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  .icono-musical {
+    font-size: 2.5rem;
+    color: #ffb6d9;
+    margin-bottom: 0.5rem;
+  }
+  
+  .titulo {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+  }
+  
+  .descripcion {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  button {
+    background-color: #ffb6d9;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff9fcd;
+  }
+  a.boton {
+    display: inline-block;
+    background-color: #ffb6d9;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  a.boton:hover {
+    background-color: #ff9fcd;
+  }
+  

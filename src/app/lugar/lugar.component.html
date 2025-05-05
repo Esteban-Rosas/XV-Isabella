@@ -1,4 +1,3 @@
-<app-confirmar-asistencia></app-confirmar-asistencia>
 <div class="lugar-container">
   <h1>Celebración</h1>
   
@@ -23,9 +22,15 @@
         <i class="fas fa-map-location-dot"></i> VER MAPA
       </button>
       
-      <button class="boton-confirmar" (click)="abrirModalConfirmacion()" aria-label="Confirmar asistencia">
-        <i class="fas fa-envelope" aria-hidden="true"></i> CONFIRMAR ASISTENCIA
+      <!-- Este botón ahora activará el modal del hijo -->
+      <button class="boton-confirmar" (click)="confirmarAsistencia.mostrarModal = true">
+        <i class="fas fa-envelope"></i> CONFIRMAR ASISTENCIA
       </button>
     </div>
   </div>
-</div>
+  
+  <!-- Referencia al componente hijo -->
+  <app-confirmar-asistencia 
+    #confirmarAsistencia
+    (closed)="confirmarAsistencia.mostrarModal = false">
+  </app-confirmar-asistencia>
