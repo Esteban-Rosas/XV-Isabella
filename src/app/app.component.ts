@@ -7,10 +7,11 @@ import { LugarComponent } from './lugar/lugar.component'; // Importa el nuevo co
 import { ConfirmarAsistenciaComponent } from './confirmar-asistencia/confirmar-asistencia.component';
 import { SugerirMusicaComponent } from './sugerir-musica/sugerir-musica.component'; // Importa el nuevo componente
 import { InstagramHashtagComponent } from './instagram-hashtag/instagram-hashtag.component';  // Importa el nuevo componente
+import { FinalMensajeComponent } from './final-mensaje/final-mensaje.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [InicioComponent, RelojComponent, MensajeComponent, InvitacionComponent, LugarComponent,SugerirMusicaComponent, InstagramHashtagComponent], // Agrega InvitacionComponent
+  imports: [InicioComponent, RelojComponent, MensajeComponent, InvitacionComponent, LugarComponent,SugerirMusicaComponent, InstagramHashtagComponent, FinalMensajeComponent], // Agrega InvitacionComponent
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

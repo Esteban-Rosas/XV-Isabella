@@ -4,17 +4,18 @@
     justify-content: center;
     align-items: center;
     height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background-color: #f9f9f9; /* Fondo claro */
+    /*background-color: #f9f9f9; /* Fondo claro */
     color: #333; /* Color del texto */
     text-align: center;
     font-family: 'Great Vibes', cursive;
     padding: 20px; /* Espaciado para dispositivos pequeños */
+    height: 70vh;
   }
   
   .contenido p {
     font-size: 2em;
     margin: 10px 0;
-    line-height: 1.5;
+    line-height: 1;
   }
   
   /* Media queries para responsividad */
@@ -28,4 +29,11 @@
     .contenido p {
       font-size: 1.2em; /* Tamaño más pequeño para móviles */
     }
+  }
+
+
+  .xv {
+    font-family: "Kaushan Script", cursive;
+    color: rgb(231, 141, 240);
+    font-size:big !important;
   }

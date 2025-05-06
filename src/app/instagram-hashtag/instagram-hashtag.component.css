@@ -1,80 +1,72 @@
-.hashtag-container {
-    width: 100%;
-    height: 100vh;
-    background-image: url('fondo.jpg'); /* Usa aquí tu imagen */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.instagram-section {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kaushan Script", fantasy;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contenido {
+  background: #fff9f0;
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.253);
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+}
+
+.icono {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+a.boton {
+  display: inline-block;
+  background-color: #ffb6d9;
+  border-radius: 9999px;
+  padding: 0.7rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+a.boton:hover {
+  background-color: #ff9fcd;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
   }
-  
-  .overlay {
-    background-color: rgba(255, 255, 255, 0.6); /* efecto desenfocado blanco suave */
-    backdrop-filter: blur(4px);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .contenido {
-    text-align: center;
-    padding: 1rem;
-    color: #333;
-  }
-  
-  .contenido .icono {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .contenido h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
-  .contenido p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #555;
-  }
-  
-  a.boton {
-    display: inline-block;
-    background-color: #ffb6d9;
-    border-radius: 9999px;
-    padding: 0.7rem 1.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 2px;
+
+  p {
     font-size: 0.9rem;
-    transition: background-color 0.3s ease;
   }
-  
-  a.boton:hover {
-    background-color: #ff9fcd;
+
+  a.boton {
+    font-size: 0.8rem;
+    padding: 0.6rem 1.2rem;
   }
-  
-  /* Responsive ajustes */
-  @media screen and (max-width: 480px) {
-    .contenido h2 {
-      font-size: 1.5rem;
-    }
-  
-    .contenido p {
-      font-size: 0.9rem;
-    }
-  
-    a.boton {
-      font-size: 0.8rem;
-      padding: 0.6rem 1.2rem;
-    }
-  }
-  
+}

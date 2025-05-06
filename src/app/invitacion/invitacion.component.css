@@ -2,19 +2,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background-color: #f9f9f9; /* Fondo claro */
+    height: 70vh; /* Ocupa toda la altura de la pantalla */
+    /*background-color: #f9f9f9; /* Fondo claro */
     color: #333; /* Color del texto */
     text-align: center;
     font-family: 'Great Vibes', cursive;
-    padding: 20px;
-  }
+    padding: 1%;
+    }
   
   .contenido {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    background-color: #fff9f0; /* Fondo semi-transparente */
     padding: 20px;
     border-radius: 10px;
-    max-width: 90%; /* Limita el ancho en dispositivos pequeños */
+    max-width: 90%;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.253); /* Limita el ancho en dispositivos pequeños */
   }
   
   .familia {
