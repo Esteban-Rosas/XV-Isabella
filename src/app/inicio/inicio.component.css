@@ -1,54 +1,87 @@
-/* Estilos generales */
 .inicio-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
-  background-image: url('fondo.png'); /* Ruta de la imagen de fondo */
+  height: 100vh;
+  background-image: url('fondo.png');
   background-size: cover;
   background-position: center;
-  color: white;
-  text-align: center;
+  position: relative;
   font-family: 'Caveat', cursive;
-  padding: 20px; /* Espaciado para dispositivos pequeños */
 }
 
 .contenido {
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 90%; /* Limita el ancho en dispositivos pequeños */
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 4s ease;
 }
 
+h1, h2, p {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+ 
 h1 {
   font-size: 4em;
-  margin: 0;
+  margin-bottom: 10px;
+  font-family: 'Great Vibes', cursive;
+  color: #ffb6c1;
+  text-shadow: 2px 2px 5px #000;
 }
 
 h2 {
-  font-size: 3em;
-  margin: 10px 0;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #fff;
 }
 
 p {
-  font-size: 1.5em;
-  margin: 10px 0;
+  font-size: 3.5em !important;
+  color: rgba(199, 21, 133, 0.4);
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .desliza {
-  margin-top: 20px;
   font-size: 1.2em;
+  color: #ffffff;
+  animation: bounce 2s infinite;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+
 }
 
 .desliza span {
   display: block;
   cursor: pointer;
+  font-size: 1.5em;
+  transition: transform 0.3s ease;
 }
 
-/* Media queries para responsividad */
+.desliza span:hover {
+  transform: scale(1.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   h1 {
-    font-size: 3em; /* Tamaño más pequeño para tablets */
+    font-size: 3em;
   }
 
   h2 {
@@ -58,31 +91,35 @@ p {
   p {
     font-size: 1.2em;
   }
-
 }
 
 @media (max-width: 480px) {
+  .contenido {
+    padding: 30px 20px;
+  }
+
   h1 {
-    font-size: 2em; /* Tamaño más pequeño para móviles */
+    font-size: 2.2em;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   p {
     font-size: 1em;
   }
+}
 
-  .contador {
-    gap: 10px; /* Menor espacio entre los elementos */
-  }
-
-  .tiempo span:first-child {
-    font-size: 1.2em;
-  }
-
-  .tiempo span:last-child {
-    font-size: 0.7em;
-  }
+.boton-musica {
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2em;
 }

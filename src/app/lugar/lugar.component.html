@@ -1,16 +1,42 @@
-<div class="lugar-container">
-  <h1>Celebración</h1>
-  
+<section class="lugar-container">
   <div class="tarjeta-lugar">
     <div class="detalles-evento">
-      <p>La recepción será el día <strong>Sábado 24 de Mayo</strong>.</p>
-      <p>Los espero a las <strong>7:00 P.M</strong> en:</p>
+      <h2 class="nombre-salon">
+        <i class="fa-solid fa-church"></i>
+        Ceremonia Religiosa
+      </h2>
+      <p>21 de mayo</p>
+      <p>7:00 PM</p>
+      <div class="direccion">
+        <i class="fa-solid fa-location-dot"></i>
+        Casa de Ejercicios San Ignacio
+      </div>
+    </div>
+
+    <!-- SACAMOS LOS BOTONES FUERA de .detalles-evento -->
+    <div class="botones-accion">
+      <button class="boton-mapa" (click)="abrirMapaCeremonia()">
+        <i class="fa-solid fa-map-location-dot"></i> Ver en el mapa
+      </button>
       
+    </div>
+
+  </div>
+</section>
+
+<div class="lugar-container">
+  <h1>Recepción</h1>
+
+  <div class="tarjeta-lugar">
+    <div class="detalles-evento">
+      <p>Dia: <strong>Sábado 24 de Mayo</strong>.</p>
+      <p>Los espero a las <strong>7:00 P.M</strong> en:</p>
+
       <div class="nombre-salon">
         <i class="fas fa-crown"></i>
         <h2>Salón de Eventos EL MIRADOR</h2>
       </div>
-      
+
       <div class="direccion">
         <i class="fas fa-location-dot"></i>
         <p>Corregimiento de Cabrera</p>
@@ -21,16 +47,14 @@
       <button class="boton-mapa" (click)="abrirMapa()">
         <i class="fas fa-map-location-dot"></i> VER MAPA
       </button>
-      
+
       <!-- Este botón ahora activará el modal del hijo -->
       <button class="boton-confirmar" (click)="confirmarAsistencia.mostrarModal = true">
         <i class="fas fa-envelope"></i> CONFIRMAR ASISTENCIA
       </button>
     </div>
   </div>
-  
+
   <!-- Referencia al componente hijo -->
-  <app-confirmar-asistencia 
-    #confirmarAsistencia
-    (closed)="confirmarAsistencia.mostrarModal = false">
+  <app-confirmar-asistencia #confirmarAsistencia (closed)="confirmarAsistencia.mostrarModal = false">
   </app-confirmar-asistencia>

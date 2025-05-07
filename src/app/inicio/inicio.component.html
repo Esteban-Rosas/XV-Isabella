@@ -1,11 +1,15 @@
 <div class="inicio-container">
-    <div class="contenido">
-      <h1>MIS XV AÑOS</h1>
-      <h2>Isabella Parada Portilla</h2>
-      <p>24 DE MAYO 2025</p>
-      <div class="desliza">
-        <span>DESLIZA</span>
-        <span (click)="scrollToMensaje()">↓</span> <!-- Botón para deslizar -->
-      </div>
+  <div class="contenido">
+    <h1>MIS XV AÑOS</h1>
+    <h2>Isabella Parada Portilla</h2>
+    <p>24 DE MAYO 2025</p>
+    <div class="desliza">
+      <span>DESLIZA</span>
+      <span (click)="scrollToMensaje()">↓</span>
     </div>
   </div>
+</div>
+
+<button (click)="playMusic()" class="boton-musica">🎵 Escuchar música</button>
+<audio #player id="player" src="assets/musica.mp3" loop></audio>
+
