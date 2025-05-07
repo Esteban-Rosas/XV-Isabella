@@ -50,14 +50,5 @@ export class InicioComponent implements OnInit, OnDestroy {
       mensajeSection.scrollIntoView({ behavior: 'smooth' }); // Scroll suave
     }
   }
-  playMusic() {
-    const audio = new Audio();
-    audio.src = 'assets/musica.mp3'; // sin slash inicial
-    audio.load();
-    audio.play().catch(error => {
-      console.error('Error al reproducir el audio:', error);
-    });
-  }
-  
-  
+    
 }
